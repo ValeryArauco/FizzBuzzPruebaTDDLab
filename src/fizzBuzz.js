@@ -1,12 +1,21 @@
+function esDivisibleEntreTres(numero) {
+  return numero % 3 === 0;
+}
+
+function esDivisibleEntreCinco(numero) {
+  return numero % 5 === 0;
+}
+
+
 function obtenerFizzBuzz(numero) {
   let resultado = numero;
-  if (numero % 3 === 0 && numero % 5 === 0) {
+  if (esDivisibleEntreCinco(numero) && esDivisibleEntreTres(numero)) {
     resultado = "FizzBuzz";
   } 
-  else if (numero % 3 === 0) {
+  else if (esDivisibleEntreTres(numero)) {
     resultado = "Fizz";
   }
-  else if (numero % 5 === 0) {
+  else if (esDivisibleEntreCinco(numero)) {
     resultado = "Buzz";
   }
   return resultado
