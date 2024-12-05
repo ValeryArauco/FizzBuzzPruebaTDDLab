@@ -1,4 +1,6 @@
-import obtenerFizzBuzz from "./fizzBuzz.js";
+import { obtenerFizzBuzz} from "./fizzBuzz.js";
+import { esDivisibleEntreCinco } from "./fizzBuzz.js";
+import { esDivisibleEntreTres } from "./fizzBuzz.js";
 
 describe("obtener fizz buzz para un numero", () => {
   it("deberia devolver el mismo número", () => {
@@ -15,5 +17,14 @@ describe("obtener fizz buzz para un numero", () => {
 
   it("deberia devolver FizzBuzz si es dvisible entre 3 y 5", () => {
     expect(obtenerFizzBuzz(15)).toEqual('FizzBuzz');
+  });
+});
+
+describe("obtener fizz buzz para un numero", () => {
+  it("deberia devolver Fizz", () => {
+    expect(esDivisibleEntreTres(3)).toEqual('Fizz');
+  });
+  it("deberia devolver Buzz", () => {
+    expect(esDivisibleEntreCinco(5)).toEqual('Buzz');
   });
 });
