@@ -1,7 +1,7 @@
 import obtenerFizzBuzz from "./fizzBuzz.js";
 
 describe("obtener fizz buzz para un numero", () => {
-  it("deberia devolver el mismo numero", () => {
+  it("deberia devolver el mismo número", () => {
     expect(obtenerFizzBuzz(1)).toEqual(1);
   });
 
